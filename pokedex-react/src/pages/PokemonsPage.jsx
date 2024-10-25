@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -21,7 +22,7 @@ function PokemonsPage() {
       {pokemons.length > 0 ? (
         <ul>
           {pokemons.map((pokemon) => {
-            return <li key={pokemon.id}>{pokemon.name}</li>;
+            return <li key={pokemon.id}>{pokemon.name} <Link to={"/pokemons/show/:id"}><button></button></Link></li>;
           })}
         </ul>
       ) : (

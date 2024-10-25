@@ -25,6 +25,10 @@ function PokemonShowPage() {
                 <div>
                     <img src={pokemon.image} alt={pokemon.name} />
                     <p>Nom : {pokemon.name}</p>
+                    <p>Statistiques</p>
+                    <ul>
+                        <li></li>
+                    </ul>
                 </div>
             )}
             <Footer />
