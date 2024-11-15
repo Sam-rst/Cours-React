@@ -1,20 +1,22 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 
-function PokemonShowPage() {
+export default function PokemonShowPage() {
     const { id } = useParams()
 
     const [pokemon, setPokemon] = useState(null)
 
-    fetch(`https://pokebuildapi.fr/api/v1/pokemon/${id}`)
-        .then((response) => {
-            return response.json()
-        })
-        .then((data) => {
-            setPokemon(data)
-        })
+    useEffect(() => {
+        fetch(`https://pokebuildapi.fr/api/v1/pokemon/${id}`)
+            .then((response) => {
+                return response.json()
+            })
+            .then((data) => {
+                setPokemon(data)
+            })
+    }, [])
 
     return (
         <>
@@ -35,4 +37,3 @@ function PokemonShowPage() {
         </>
     )
 }
-export default PokemonShowPage

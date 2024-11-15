@@ -9,10 +9,10 @@ const Header = () => {
                         <Link to="/">Accueil</Link>
                     </li>
                     <li>
-                        <Link to="/pokemons">Pokemons</Link>
+                        <Link to="/top6">Top 6</Link>
                     </li>
                     <li>
-                        <Link to="/faq">FAQ</Link>
+                        <Link to="/random">Alcools aléatoires</Link>
                     </li>
                 </ul>
             </nav>

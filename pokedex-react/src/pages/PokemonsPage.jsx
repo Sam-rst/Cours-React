@@ -22,7 +22,7 @@ function PokemonsPage() {
       {pokemons.length > 0 ? (
         <ul>
           {pokemons.map((pokemon) => {
-            return <li key={pokemon.id}>{pokemon.name} <Link to={"/pokemons/show/:id"}><button></button></Link></li>;
+            return <li key={pokemon.id}>{pokemon.name} <Link to={"/pokemons/show/:id"}><button>Voir</button></Link></li>;
           })}
         </ul>
       ) : (

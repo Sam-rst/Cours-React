@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PokemonsPage from "./pages/PokemonsPage";
 import HomePage from "./pages/HomePage";
 import PokemonShowPage from './pages/PokemonShowPage';
+import FAQPage from './pages/FAQPage';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/pokemons" element={<PokemonsPage />} />
         <Route path="/pokemons/show/:id" element={<PokemonShowPage />} />
+        <Route path="/faq" element={<FAQPage />} />
       </Routes>
     </BrowserRouter>
   );
